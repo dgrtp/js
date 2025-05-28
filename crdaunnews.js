@@ -1,29 +1,21 @@
-$(document).ready(function () {
-    // Fungsi saat teks dicopy
-    document.oncopy = function () {
-      var tambahanInfo = "Dilarang keras menyalin, memodifikasi, produksi ulang, menerbitkan ulang, upload ulang, serta mendistribusikan ulang semua konten Business Insight tanpa izin tertulis terlebih dahulu dari Kontan. Semua konten dalam Business Insight adalah hak milik Kontan dan dilindungi oleh UU Hak Cipta.<br /><br />DaunNews<br />www.dgjackpot.site";
+document.addEventListener("DOMContentLoaded", function () {
+    // Cegah salin & tambahkan teks khusus
+    document.addEventListener("copy", function (e) {
+      e.preventDefault();
+      const tambahan = "Dilarang keras menyalin konten ini tanpa izin. DaunNews - www.dgjackpot.site";
+      const clipboardData = e.clipboardData || window.clipboardData;
+      if (clipboardData) {
+        clipboardData.setData("text/plain", tambahan);
+      }
+    });
 
-      var body = document.getElementsByTagName("body")[0];
-      var selection = window.getSelection();
-      var div = document.createElement("div");
-      div.style.position = "absolute";
-      div.style.left = "-99999px";
-      body.appendChild(div);
-      div.innerHTML = tambahanInfo;
-      selection.selectAllChildren(div);
-
-      setTimeout(function () {
-        body.removeChild(div);
-      }, 0);
-    };
-
-    // Blokir F12, Ctrl+U, Ctrl+Shift+I lalu redirect
+    // Blokir kombinasi tombol tertentu dan redirect
     document.addEventListener("keydown", function (e) {
-      if (
-        e.key === "F12" || e.keyCode === 123 ||
-        (e.ctrlKey && e.key.toLowerCase() === "u") ||
-        (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "i")
-      ) {
+      const isF12 = e.key === "F12" || e.keyCode === 123;
+      const isCtrlU = e.ctrlKey && e.key.toLowerCase() === "u";
+      const isCtrlShiftI = e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "i";
+
+      if (isF12 || isCtrlU || isCtrlShiftI) {
         window.location.href = "https://www.admto.online";
         e.preventDefault();
         return false;
