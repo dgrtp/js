@@ -15,7 +15,7 @@
         l = n.concat(o),
         d = document.getElementsByTagName("body")[0],
         p =
-          "Dilarang keras menyalin, memodifikasi, produksi ulang, menerbitkan ulang, upload ulang, serta mendistribusikan ulang semua konten Business Insight dalam bentuk apa pun tanpa izin tertulis terlebih dahulu dari Kontan. Semua konten dalam Business Insight adalah hak milik Kontan dan dilindungi oleh UU Hak Cipta.<br /><br />DG21 Movie<br />www.dg21movie.com",
+          "Dilarang keras menyalin, memodifikasi, produksi ulang, menerbitkan ulang, upload ulang, serta mendistribusikan ulang semua konten Business Insight dalam bentuk apa pun tanpa izin tertulis terlebih dahulu dari Kontan. Semua konten dalam Business Insight adalah hak milik Kontan dan dilindungi oleh UU Hak Cipta.<br /><br />DaunNews<br />www.dgjackpot.site",
         r = window.getSelection(),
         s = document.createElement("div");
       s.style.position = "absolute";
