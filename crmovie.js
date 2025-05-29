@@ -1,5 +1,4 @@
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
     // Cegah salin kecuali di input link download
     document.addEventListener("copy", function (e) {
       const activeElement = document.activeElement;
@@ -28,4 +27,3 @@
       }
     });
   });
-</script>
